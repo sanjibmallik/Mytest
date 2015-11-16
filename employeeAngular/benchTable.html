@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!-- <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script> -->
+<script src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/benchTable.js"></script>
+<body>
+
+<div ng-app="myApp">
+<div ng-controller="myCtrl">
+<h2>BENCH EMPLOYEE LIST</h2>
+
+<table border="1">
+	<thead>
+	<tr>
+		<th>No.</th>
+		<th>Name</th>
+		<th>Employee ID</th>
+		<th>Email</th>
+		<th>Last Project</th>
+		<th>Starting Date</th>
+		<th>Action</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td>{{ slNo}}</td>
+		<td>{{ fullName }}</td>
+		<td>{{ empId }}</td>
+		<td>{{ email }}</td>
+		<td>{{ lastProject }}</td>
+		<td>{{ startingDate }}</td>
+		<td>{{ action }}</td>
+
+	</tr>
+	</tbody>
+</table>
+</div>
+<br/>
+<br/>
+<hr/>
+<div ng-controller="myCtrlAdd">
+<form>
+<fieldset>
+                <legend>Add new Record</legend>
+                <div>
+                    <input type="text" name="fullName" placeholder="Enter employee name" ng-model="Nfullname"/>
+                 <div>
+                    <input type="text" name="empId" placeholder="Enter employee Id" ng-model="NempId"/>
+                </div>
+                <div>
+                    <input type="email" name="empEmail" placeholder="Company Email-Id" ng-model="Nemail"/>
+                </div>
+                <div>
+                    <input type="text" name="pastProject" placeholder="Recent Project you worked" ng-model="pastProject"/>
+                </div>
+                <div>
+                    <input type="date" name="startDate" placeholder="Starting date of Project" ng-model="startDate"/>
+                </div>
+                 <div>
+                    <input type="date" name="endDate" placeholder="Ending date of Project" ng-model="endDate"/>
+                </div>
+                 <div>
+                    <input type="text" name="projectAssigned" placeholder="Enter your current project" ng-model="projectAssigned"/>
+                </div>
+                <div>
+                    <div class="small">Enter Your technical Skills here</div>
+                    <textarea name="skills" placeholder="Message" ng-model="skills"></textarea>
+                </div> 
+                 
+                <div>
+                    Upload your resume <input type="file" name="resume[]"/>
+                </div>
+                
+                <div>
+                    Upload your Picture <input type="file" name="resume[]"/>
+                </div>  
+              <button ng-click="save()">Save</button>
+               
+            </fieldset>    
+
+</fieldset>
+</form>
+ <h1>{{ fullname }}</h1>
+ </div>
+</div>
+
+
+
+
+
+</body>
+</html> 

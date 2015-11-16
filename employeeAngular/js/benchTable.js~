@@ -1,0 +1,21 @@
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.slNo=1;
+    $scope.fullName= "Sanjib Mallik";
+    $scope.empId = 1451;
+    $scope.email= "Sanjib.Mallik@accionlabs.com"
+    $scope.lastProject = "acrobatiq";
+    $scope.startingDate = "12/12/2012";
+    $scope.action = "Edit/Delete";
+});
+
+
+app.controller('myCtrlAdd', function($scope) {
+   // $scope.slNo=1;
+    $scope.fullName= Nfullname;
+    //$scope.empId = 1451;
+    //$scope.email= "Sanjib.Mallik@accionlabs.com"
+    //$scope.lastProject = "acrobatiq";
+    //$scope.startingDate = "12/12/2012";
+    //$scope.action = "Edit/Delete";
+});
